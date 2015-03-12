@@ -17,19 +17,20 @@ var keyword = getParameterByName('p'),
     url    = '',
     actUrl = '',
     domain = '',
-    verticals = ["images","video","news","local","maps"];
+    verticals = ["images","video","news","local","shopping"],
     lastIndex = keyword.lastIndexOf("@");
 if(lastIndex !=-1){
    actKey = keyword.substr(0,lastIndex);
    domain = keyword.substr(lastIndex+1);
 
+    
    if(domain && verticals.indexOf(domain) !=-1){
        actUrl = document.location;
        url = actUrl.protocol+'//' + domain +'.search.yahoo.com'+ actUrl.pathname;
-       url += location.search.replace('p='+encodeURIComponent(keyword).replace('%20','+'),'p='+actKey);
-      console.log(location.search);
-      console.log(encodeURIComponent(keyword).replace('%20','+'));
-      console.log(url);
+       url += location.search.replace('p='+encodeURIComponent(keyword).replace(/%20/g,'+'),'p='+actKey);
+       console.log(location.search);
+       console.log(encodeURIComponent(keyword).replace(/%20/g,'+'));
+       console.log(url);
 
        document.location = url;
    }
