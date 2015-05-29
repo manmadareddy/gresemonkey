@@ -1,4 +1,20 @@
 # gresemonkey
+
+hack day -2015q2
+RDock Ad
+
+1. Install greasemonkey add-on for firefox
+https://addons.mozilla.org/en-us/firefox/addon/greasemonkey/
+
+2. Click on the monkey icon in the browser toolbar
+
+3. Choose New User script from the menu
+
+4. Copy paste the content from "rdock.user.js" file
+
+5. visit any yahoo page
+
+
 hack day -2015q1
 vertical search 
 
